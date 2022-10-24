@@ -72,6 +72,9 @@ namespace Ustr_lab1
             counter = 0;
             pe = 0;
 
+            Stopwatch sw = Stopwatch.StartNew();
+            sw.Start();
+
             try
             {
                 string mx;
@@ -149,6 +152,9 @@ namespace Ustr_lab1
                 {
                     list1.Add(points[i], points[i + 1]);
                 }
+
+                sw.Start();
+                textBox15.Text = sw.Elapsed.ToString();
 
                 LineItem myCurve1 = pane.AddCurve("", list1, Color.Blue, SymbolType.Circle);
                 myCurve1.Symbol.Fill.Type = FillType.Solid;
@@ -408,7 +414,7 @@ namespace Ustr_lab1
             sw.Start();
             while (p <= 1.01)
             {
-                while (counter < 10000)
+                while (counter < 100000)
                 {
                     int n = k + r;
                     int m10 = 0;
