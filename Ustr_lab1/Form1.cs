@@ -414,7 +414,7 @@ namespace Ustr_lab1
             sw.Start();
             while (p <= 1.01)
             {
-                while (counter < 100000)
+                while (counter < 10000)
                 {
                     int n = k + r;
                     int m10 = 0;
@@ -464,7 +464,7 @@ namespace Ustr_lab1
 
                     int s = Division(bx, gx, degree, (r + 1));
 
-                    if (s != 0 && ex > 0)
+                    if (s == 0 && ex > 0)
                     {
                         pe++;
                     }
